@@ -6,7 +6,7 @@ Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzion
 Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
-*/ 
+*/
 
 //domando all'utente se vuole pari o dispari
 //domando all'utente di scegliere un numero da 1 a 5
@@ -23,38 +23,45 @@ Dichiariamo chi ha vinto.
 const userAsk = prompt('scegli pari o dispari', 'pari').trim();
 
 //domando all'utente di scegliere un numero da 1 a 5
-const userNumber = parseInt(prompt('scegli un numero da 1 a 5', '5')); 
+const userNumber = parseInt(prompt('scegli un numero da 1 a 5', '5'));
 
 //numeri da randomizzare (da 1 a 5)
 const cpuNumber = randomizer(1, 5);
 
 
 //CREO FUNZIONE PER RANDOMIZZARE
-function randomizer(min, max){
+function randomizer(min, max) {
     //genero un numero a caso tra due numeri
-    return Math.floor(Math.random() * (max - min + 1)) + min; 
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 
 //faccio la somma del numero dell'utente con il numero random del pc
+
 sum = userNumber + cpuNumber;
 console.log(sum);
 
+//ho creato una variabile che ingloba il risultato della somma con la funzione
+let evenOr = isEoS(sum);
+console.log(evenOr);
 
-//CONDIZONE SE PARI O DISPARI
-let message;
-//stabiliamo se la somma è pari o dispari
-if(sum % 2 === 0){
-    //è pari
-    message = 'pari';
-}else {
-    //è dispari
-    message = 'dispari';
+//CREO FUNZIONE 
+//SE CONDIZONE SE PARI O DISPARI
+function isEoS(num) {
+    //stabiliamo se la somma è pari o dispari
+    if (num % 2 === 0) {
+        //è pari
+        return 'pari';
+    } else {
+        //è dispari
+       return 'dispari';
+    }
 }
 
+
 //CONDIZONE SE MESSAGGIO E' UGUALE ALLA SCELTA DELL'UTENTE
-if(message === userAsk){
+if (evenOr === userAsk) {
     console.log('ha vinto');
-}else{
+} else {
     console.log('hai perso');
 }
