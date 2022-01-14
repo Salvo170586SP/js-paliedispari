@@ -12,19 +12,43 @@ Dichiariamo chi ha vinto.
 //domando all'utente di scegliere un numero da 1 a 5
 //genero un numero a caso da 1 a 5
 //faccio la somma del numero dell'utente con il numero random del pc
-//confrontiamo i 2 numeri e stabiliamo se sono pari o dispari
+//stabiliamo se la somma è pari o dispari
 //dichiaro chi ha vinto
 
+
+
+
+
 //domando all'utente se vuole pari o dispari
-const userAsk = prompt('scegli pari o dispari').trim();
+const userAsk = prompt('scegli pari o dispari', 'pari').trim();
 
 //domando all'utente di scegliere un numero da 1 a 5
-const userNumber = parseInt(prompt('scegli un numero da 1 a 5')); 
+const userNumber = parseInt(prompt('scegli un numero da 1 a 5', '5')); 
 
-//genero un numero a caso da 1 a 5
-const randomNumber = Math.floor(Math.random() * 5) + 1; 
+//numeri da randomizzare (da 1 a 5)
+const cpuNumber = randomizer(1, 5);
+
+
+//creo la funzione per randomizzare
+function randomizer(min, max){
+    //genero un numero a caso tra due numeri
+    return Math.floor(Math.random() * (max - min + 1)) + min; 
+}
+
 
 //faccio la somma del numero dell'utente con il numero random del pc
-sum = userNumber + randomNumber;
+sum = userNumber + cpuNumber;
 console.log(sum);
 
+
+
+
+
+//stabiliamo se la somma è pari o dispari
+if(sum % 2 === 0){
+    //è pari
+    console.log('è pari');
+}else {
+    //è dispari
+    console.log('è dispari');
+}
