@@ -29,7 +29,7 @@ const userNumber = parseInt(prompt('scegli un numero da 1 a 5', '5'));
 const cpuNumber = randomizer(1, 5);
 
 
-//creo la funzione per randomizzare
+//CREO FUNZIONE PER RANDOMIZZARE
 function randomizer(min, max){
     //genero un numero a caso tra due numeri
     return Math.floor(Math.random() * (max - min + 1)) + min; 
@@ -41,14 +41,20 @@ sum = userNumber + cpuNumber;
 console.log(sum);
 
 
-
-
-
+//CONDIZONE SE PARI O DISPARI
+let message;
 //stabiliamo se la somma è pari o dispari
 if(sum % 2 === 0){
     //è pari
-    console.log('è pari');
+    message = 'pari';
 }else {
     //è dispari
-    console.log('è dispari');
+    message = 'dispari';
+}
+
+//CONDIZONE SE MESSAGGIO E' UGUALE ALLA SCELTA DELL'UTENTE
+if(message === userAsk){
+    console.log('ha vinto');
+}else{
+    console.log('hai perso');
 }
