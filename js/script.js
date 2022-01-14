@@ -19,12 +19,11 @@ Dichiariamo chi ha vinto.
 //chiedo all'utente inserire parola
 //Creo una funzione per capire se la parola inserita è palindroma
 
+
 //chiedo all'utente inserire parola
-const userWord = prompt('inserisci una parola','ciao').trim();
+const userWord = prompt('inserisci una parola', 'ciao').trim();
 
-//creo variabile d'appoggio
 let wordReverse = '';
-
 //creo ciclo per contare a ritroso le lettere tante quanto sono nella parola partendo dall'ultima
 for (let i = userWord.length - 1; i >= 0; i--) {
     //aggiungo tutte le lettere partendo dalla fine alla variabile wordReverse
@@ -32,3 +31,10 @@ for (let i = userWord.length - 1; i >= 0; i--) {
 }
 
 console.log(wordReverse);
+
+let isValid = false;
+
+if(userWord === wordReverse){
+    isValid = true;
+}
+console.log(isValid);
