@@ -39,8 +39,6 @@ buttonElement.addEventListener('click', function () {
 
         //creo variabile per definire il valore (stringa scritta) dell'input
         const optionValue = optionElement.value;
-        const numbValue = numbElement.value;
-
         
         const cpuNumber = randomizer(1, 5);
         console.log(cpuNumber);
@@ -68,7 +66,7 @@ buttonElement.addEventListener('click', function () {
             console.log('hai perso');
         }
 
-        resultElement.innerHTML = `è uscito ${evenOr}. <strong>${message}</strong> `;
+        resultElement.innerHTML = `hai scelto ${optionValue}. Il risultato è ${sum} ${evenOr}. <strong>${message}</strong> `;
     }
 })
 
