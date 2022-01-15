@@ -27,6 +27,7 @@ addedElement.addEventListener('click', function(){
 //aggancio il bottone 'CANCELLA' all'evento
 resetElement.addEventListener('click', function(){
     inputElement.value = '';
+    wordElement.innerText = '';
 })
 
 
