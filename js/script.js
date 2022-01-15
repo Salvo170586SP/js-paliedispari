@@ -15,12 +15,18 @@ const wordElement = document.getElementById('result');
 
 //aggancio il bottone 'AVVIA' all'evento
 addedElement.addEventListener('click', function(){
-    //creo variabile per definire il valore (stringa scritta) dell'input
-    const inputValue = inputElement.value;
-    console.log(inputValue);
-    //scrivo il risultato in paginas
-    wordElement.innerText = `LA PAROLA ${inputValue} ${isPalidroma(inputValue)}`;
-    console.log(isPalidroma(inputValue));
+
+    //VALIDAZIONE
+    if(!inputElement.value){
+        alert('inserisci una parola');
+    }else{
+        //creo variabile per definire il valore (stringa scritta) dell'input
+        const inputValue = inputElement.value;
+        console.log(inputValue);
+        //scrivo il risultato in paginas
+        wordElement.innerText = `LA PAROLA ${inputValue} ${isPalidroma(inputValue)}`;
+        console.log(isPalidroma(inputValue));
+    }
 })
 
 
