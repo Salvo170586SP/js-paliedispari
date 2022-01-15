@@ -32,7 +32,8 @@ select{
 
 .dsp{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+   align-items: center;
 }
 
 label{
@@ -54,12 +55,25 @@ button{
     cursor: pointer;
 }
 
+span{
+    display: inline-block;
+    background-color: white;
+    width: 400px;
+    height: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px black;
+    margin: 20px 0;
+    padding-left: 20px;
+    line-height: 50px;
+}
+
 /* box game */
 
 .box-pal,
 .box-pd
-{
+{   
     padding: 10px;
+    min-height: 350px;
 }
 
 .bg-grey{
