@@ -6,42 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div>
-        <H1>GIOCO PAROLA PALIDROMA</H1>
-        <div>
+    <div class="box-pal bg-aqua"> 
+        <h1>GIOCO PAROLA PALIDROMA</h1>
+        <div class="mrg">
             <label for="">SCRIVI UNA PAROLA</label>
             <input type="text" id="input-text">
         </div>
-        <div>
+        <div class="dsp">
             <button type="button" id="added">AVVIA</button>
             <button type="button" id="reset">CANCELLA</button>
         </div>
-        <p>RISULTATO: <span id="result"></span></p>
+        <h2>RISULTATO: <span id="result"></span></h2>
     </div>
 
-    <hr>
 
-    <div>
+    <div class="box-pd bg-grey">
         <h1>GIOCO PARI O DISPARI</h1>
-        <div>
+        <div class="mrg">
             <label for="">SCELGLI PARI O DISPARI</label>
             <select id="pari-dispari">
                 <option value="pari">pari</option>
                 <option value="dispari">dispari</option>
             </select>
         </div>
-        <div>
+        <div class="mrg">
             <label for="">SCEGLI UN NUMERO DA 1 A 5</label>
             <input type="number" id="input-number" min="1" max="5" value="2">
         </div>
-        <div>
+        <div class="dsp">
             <button type="button" id="calculate">AVVIA</button>
             <button type="button" id="delete">CANCELLA</button>
         </div>
-        <p>RISULTATO: <span id="placeholder"></span></p>
+        <h2>RISULTATO: <span id="placeholder"></span></h2>
     </div>
 
 

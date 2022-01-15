@@ -1,0 +1,72 @@
+/* general */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+/* utility */
+
+h1{
+    padding: 20px 0;
+}
+
+h2{
+    margin-top: 10px;
+    padding: 10px 0;
+}
+
+select{
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.mrg{
+    margin-bottom: 25px;
+}
+
+.dsp{
+    display: flex;
+    justify-content: center;
+}
+
+label{
+    font-weight: bold;
+}
+
+input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid gray;
+}
+
+button{
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px black;
+    border: 0;
+    cursor: pointer;
+}
+
+/* box game */
+
+.box-pal,
+.box-pd
+{
+    padding: 10px;
+}
+
+.bg-grey{
+    background-color: rgb(184, 184, 184);
+}
+
+.bg-aqua{
+    background-color: aqua;
+}
+
