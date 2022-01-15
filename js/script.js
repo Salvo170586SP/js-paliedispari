@@ -8,18 +8,18 @@ Creare una funzione per capire se la parola inserita è palindroma
 
 //recupero elementi in pagina
 const inputElement = document.getElementById('input-text');
-const buttonElement = document.getElementById('calculate');
+const addedElement = document.getElementById('added');
 const resetElement = document.getElementById('reset');
-const resultElement = document.getElementById('result');
+const wordElement = document.getElementById('result');
 
 
 //aggancio il bottone 'AVVIA' all'evento
-buttonElement.addEventListener('click', function(){
+addedElement.addEventListener('click', function(){
     //creo variabile per definire il valore (stringa scritta) dell'input
     const inputValue = inputElement.value;
     console.log(inputValue);
     //scrivo il risultato in paginas
-    resultElement.innerText = `LA PAROLA ${inputValue} ${isPalidroma(inputValue)}`;
+    wordElement.innerText = `LA PAROLA ${inputValue} ${isPalidroma(inputValue)}`;
     console.log(isPalidroma(inputValue));
 })
 
